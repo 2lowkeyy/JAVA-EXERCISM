@@ -1,30 +1,21 @@
 public class AnnalynsInfiltration {
     public static boolean canFastAttack(boolean knightIsAwake) {
-        boolean result = !knightIsAwake;
-        System.out.println("canFastAttack: " + result);
-        return result;
+        return !knightIsAwake;
     }
 
     public static boolean canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake) {
-        boolean result = knightIsAwake || archerIsAwake || prisonerIsAwake;
-        System.out.println("canSpy: " + result);
-        return result;
+        return knightIsAwake || archerIsAwake || prisonerIsAwake;
     }
 
     public static boolean canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake) {
-        boolean result = prisonerIsAwake && !archerIsAwake;
-        System.out.println("canSignalPrisoner: " + result);
-        return result;
+        return prisonerIsAwake && !archerIsAwake;
     }
 
     public static boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
-        boolean result;
         if (petDogIsPresent) {
-            result = !archerIsAwake;
+            return !archerIsAwake;
         } else {
-            result = prisonerIsAwake && !knightIsAwake && !archerIsAwake;
+            return prisonerIsAwake && !knightIsAwake && !archerIsAwake;
         }
-        System.out.println("canFreePrisoner: " + result);
-        return result;
     }
 }
